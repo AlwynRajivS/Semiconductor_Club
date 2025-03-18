@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCET-Semiconductor Club Resources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #242b2e, #1e2527, #20292c);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: rgba(5, 5, 5, 0.945);
+            text-align: center;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 100;
+            background: rgba(8, 8, 8, 0.973);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* Mobile Navigation Menu */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                background: rgba(0, 0, 0, 0.9);
+                padding: 15px;
+                border-radius: 10px;
+                text-align: center;
+                width: 200px;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            
+        }
+        h2 {
+            margin-top: 80px;
+            text-align: center;
+            color: rgb(81, 168, 250); /* Change to your preferred color */
+            font-size: 30px; /* Adjust the size as needed */
+        }
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .activity {
+            background: rgb(213, 215, 216);
+            color: black;
+            padding: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .activity:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .activity img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .activity:hover img {
+            transform: scale(1.05);
+        }
+
+        .activity h3 {
+            color: #0073e6;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .activity p {
+            font-size: 18px;
+            margin-top: 10px;
+            line-height: 1cm;
+            text-align: justify;
+            font-family: 'Poppins', sans-serif; /* Change to your preferred font */
+        }
+
+        @media (max-width: 768px) 
+        {
+            .activities {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+            }
+          
+    
+            .activity img{
+                width: 90%;
+                height:50%;
+                margin-bottom: 20px;
+            }
+            .activity h3
+            {
+                width:100%;
+            }
+            .activity p
+            {
+                width:100%;
+                line-height: 1%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">KCET-Semiconductor Club</h1>
+        <div class="menu-toggle">☰</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About_Us.html">About Us</a></li>
+                <li><a href="Activity.html">Activity</a></li>
+                <li><a href="Team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2>Semiconductor Club Resources</h2>
+    <div class="activities">
+        
+        <div class="activity" onclick="location.href='Books.html'">
+            <img src="Images/BOOKs.jpg" alt="Book Resources">
+            <h3>Book Resources</h3>
+            <p>Explore a comprehensive collection of semiconductor book resources 
+                covering fundamental principles, advanced design methodologies, 
+                and the latest innovations in the field. Whether you're delving into 
+                semiconductor physics, VLSI design, FPGA implementation, or IC fabrication, 
+                these books serve as valuable references for club members. 
+                Stay informed with expertly curated recommendations to enhance your 
+                knowledge and keep up with evolving technologies in semiconductor engineering.</p>
+        </div>
+        <div class="activity" onclick="location.href='Video Resources.html'">
+            <img src="Images/VideoR.jpg" alt="Video Resources">
+            <h3>Video Resources</h3>
+            <p>Discover a curated selection of YouTube video resources covering 
+                semiconductor fundamentals, VLSI design, fabrication processes, 
+                FPGA programming, and IC design. Whether you're a beginner or an advanced learner, 
+                these videos offer in-depth tutorials, industry insights, and expert discussions to 
+                enhance your understanding. Stay updated with the latest trends and technologies in 
+                semiconductor engineering through engaging visual content.</p>
+        </div>
+   </div>
+   <div class="activities">
+        
+        <div class="activity" onclick="location.href='Web Resources.html'">
+            <img src="Images/WebR.jpg" alt="Web Resources">
+            <h3>Web Resources</h3>
+            <p>Access a curated list of websites offering in-depth knowledge on 
+                semiconductor technology, covering topics such as VLSI design, 
+                fabrication processes, IC design, FPGA programming, and industry trends. 
+                These platforms provide research papers, tutorials, online courses, and the 
+                latest updates from leading semiconductor experts and organizations.</p>
+        </div>
+        <div class="activity" onclick="location.href='Eminent Persons.html'">
+            <img src="Images/EMP.png" alt="Eminent Persons">
+            <h3>Eminent Persons</h3>
+            <p>The field of semiconductors has been shaped by visionary scientists, 
+                engineers, and industry leaders who have contributed groundbreaking 
+                innovations. From pioneers like William Shockley, John Bardeen, and Walter Brattain, 
+                who co-invented the transistor, to modern-day experts driving advancements in VLSI, 
+                chip design, and nanotechnology, these eminent personalities continue to inspire the 
+                future of semiconductor engineering. Their contributions have paved the way for technological
+                 revolutions in computing, communication, and electronics.</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navMenu = document.querySelector("nav ul");
+
+            menuToggle.addEventListener("click", function() {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>

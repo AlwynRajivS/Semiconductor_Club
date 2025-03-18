@@ -1,0 +1,290 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCET-Semiconductor Club - About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #242b2e, #1e2527, #20292c);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: rgba(5, 5, 5, 0.945);
+            text-align: center;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 100;
+            background: rgba(8, 8, 8, 0.973);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* Mobile Navigation Menu */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                background: rgba(0, 0, 0, 0.9);
+                padding: 15px;
+                border-radius: 10px;
+                text-align: center;
+                width: 200px;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+
+        .scrolling-message {
+            width: 100%;
+            overflow: hidden;
+            color: #ffcc00;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 80px;
+            white-space: nowrap;
+        }
+
+        .container {
+            padding: 30px;
+            margin-top: 0px;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 20px;
+            text-align: justify;
+        }
+
+        .section img {
+            width: 50%;
+            height: 300px; 
+            border-radius: 20px;
+        }
+
+        .section .text {
+            width: 48%;
+        }
+
+        .vision-mission {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .vision-mission .box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 48%;
+            text-align: justify;
+            height: 100%;
+        }
+        
+        p {
+            font-size: 16px;
+            color: white;
+            line-height: 2;
+        }
+
+        .highlight-text {
+            color: rgb(69, 194, 243);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #7bdcfa;
+            line-height: 2;
+        }
+
+        .vision-mission img {
+            width: 100%;
+            height: 50%;
+            border-radius: 10px;
+        }
+
+        .hightlight-text {
+            color: rgb(69, 194, 243);
+             }
+
+        /* Mobile Fixes for Purpose, Vision & Mission */
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .section img {
+                width: 90%;
+                margin-bottom: 15px;
+            }
+
+            .section .text {
+                width: 100%;
+            }
+
+            .vision-mission {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .vision-mission .box {
+                width: 100%;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">KCET-Semiconductor Club</h1>
+        <div class="menu-toggle">☰</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Activity.html">Activity</a></li>
+                <li><a href="Resources.html">Resources</a></li>
+                <li><a href="Team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="scrolling-message">
+        <marquee>Welcome to KCET Semiconductor Club! Stay tuned for upcoming events and innovations.</marquee>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <img src="Images/Intro.jpg" alt="Introduction">
+            <div class="text">
+                <h2>Purpose</h2>
+                <p>Our club is dedicated to enhancing knowledge and expertise in the 
+                    semiconductor domain through various engaging activities, including 
+                    <b class="highlight-text">invited talks, webinars, workshops, and hands-on training</b>. 
+                    This initiative aligns with the <b class="highlight-text">"India Semiconductor Mission"</b>.
+                </p>
+            </div>
+        </div>
+
+        <div class="vision-mission">
+            <div class="box" style="order: 2;">
+                <img src="Images/Mission.jpg" alt="Mission">
+                <h2>Mission</h2>
+                <p> <b class="hightlight-text"> Promote Industry-Academia Collaboration:</b>
+                     Organize webinars, workshops, and hands-on sessions with industry experts and academic 
+                     leaders to bridge the gap between theoretical knowledge and industry practices.
+                </p>
+                <p><b class="hightlight-text">Foster Innovation and Research:</b> Encourage students to work on real-time projects, 
+                    participate in technical competitions, and develop problem-solving skills in the semiconductor domain.
+                </p>
+                <p><b class="hightlight-text">Empower with Practical Skills: </b>Provide technical training, certifications, 
+                    and exposure to advanced semiconductor technologies, aligning with the "India Semiconductor Mission" 
+                    to contribute to national technological advancement. 
+                </p>
+            </div>
+            <div class="box" style="order: 1;">
+                <img src="Images/Vision.jpg" alt="Mission">
+                <h2>Vision</h2>
+                <p>To nurture a community of innovators and industry-ready professionals by 
+                    fostering in-depth knowledge and hands-on expertise in the semiconductor domain,
+                     empowering students to contribute to cutting-edge advancements in technology, research, 
+                     and development, while aligning with the national vision of the <b class="hightlight-text"> "India Semiconductor 
+                        Mission"</b>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navMenu = document.querySelector("nav ul");
+
+            menuToggle.addEventListener("click", function() {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
