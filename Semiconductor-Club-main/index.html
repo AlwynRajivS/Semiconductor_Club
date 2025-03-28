@@ -155,6 +155,34 @@
             width: 100%;
         }
 
+
+        .intro-image {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .intro-image img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        /* Fade-out effect */
+        .fade-out {
+            animation: fadeOut 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .menu-toggle {
@@ -192,6 +220,12 @@
     </style>
 </head>
 <body>
+     
+    <div class="intro-image">
+        <img src="Club Inguration.png" alt="Welcome Image">
+    </div>
+
+    
     <div class="video-container">
         <video autoplay loop muted playsinline>
             <source src="background.mp4" type="video/mp4">
@@ -232,6 +266,14 @@
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('show');
         });
+
+        // Hide the intro image after 30 seconds
+        setTimeout(() => {
+            document.querySelector('.intro-image').classList.add('fade-out');
+            setTimeout(() => {
+                document.querySelector('.intro-image').style.display = 'none';
+            }, 2000); // Allow fade-out effect
+        }, 30000);
     </script>
 </body>
     
