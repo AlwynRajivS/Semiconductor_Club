@@ -157,33 +157,32 @@
         }
 
 
-        .intro-image {
-            position: fixed;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
+          /* Skip Button */
+        .skip-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
         }
 
-        .intro-image img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
+        .skip-btn:hover {
+            background: #ffaa00;
         }
 
         /* Fade-out effect */
         .fade-out {
-            animation: fadeOut 2s ease-in-out forwards;
+            animation: fadeOut 1.5s ease-in-out forwards;
         }
 
         @keyframes fadeOut {
             from { opacity: 1; }
             to { opacity: 0; }
         }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .menu-toggle {
@@ -224,6 +223,7 @@
      
     <div class="intro-image">
         <img src="Club Inguration.png" alt="Welcome Image">
+        <button class="skip-btn">Skip</button>
     </div>
 
     
@@ -269,12 +269,20 @@
         });
 
         // Hide the intro image after 30 seconds
-        setTimeout(() => {
-            document.querySelector('.intro-image').classList.add('fade-out');
-            setTimeout(() => {
-                document.querySelector('.intro-image').style.display = 'none';
-            }, 1000); // Allow fade-out effect
-        }, 10000);
+        document.addEventListener("DOMContentLoaded", () => {
+            const introImage = document.querySelector(".intro-image");
+            const skipBtn = document.querySelector(".skip-btn");
+
+            // Auto-hide after 30 seconds
+            const hideIntro = () => {
+                introImage.classList.add("fade-out");
+                setTimeout(() => { introImage.style.display = "none"; }, 1500);
+            };
+
+            setTimeout(hideIntro, 30000);
+
+            // Skip button functionality
+            skipBtn.addEventListener("click", hideIntro);
     </script>
 </body>
     
