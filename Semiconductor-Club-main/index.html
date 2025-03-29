@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
     <link rel="preload" href="Club Inguration.png" as="image"> 
+
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KCET-Semiconductor Innovation Club</title>
@@ -155,7 +158,9 @@
             bottom: 0;
             width: 100%;
         }
-/* Intro Image */
+
+        
+/*Intro Image 
         .intro-image {
             position: fixed;
             width: 100%;
@@ -175,7 +180,7 @@
         }
 
 
-          /* Skip Button */
+          
         .skip-btn {
             margin-top: 20px;
             padding: 10px 20px;
@@ -192,15 +197,19 @@
             background: #ffaa00;
         }
 
-        /* Fade-out effect */
+       
         .fade-out {
             animation: fadeOut 1.5s ease-in-out forwards;
         }
+
+       
 
         @keyframes fadeOut {
             from { opacity: 1; }
             to { opacity: 0; }
         }
+
+         */
         /* Responsive Design */
         @media (max-width: 768px) {
             .menu-toggle {
@@ -238,12 +247,14 @@
     </style>
 </head>
 <body>
-     
+     <!--
+    
     <div class="intro-image">
         <img src="Club Inguration.png" alt="Welcome Image">
         <button class="skip-btn">Skip</button>
     </div>
 
+    -->
     
     <div class="video-container">
         <video autoplay loop muted playsinline>
@@ -286,7 +297,8 @@
             document.querySelector('nav ul').classList.toggle('show');
         });
 
-       // Ensure script runs after the page loads
+      /*
+        // Ensure script runs after the page loads
         window.onload = function() {
             const introImage = document.querySelector(".intro-image");
             const skipBtn = document.querySelector(".skip-btn");
@@ -303,6 +315,8 @@
             // Skip button click event
             skipBtn.addEventListener("click", hideIntro);
         };
+
+        */
     </script>
 </body>
     
