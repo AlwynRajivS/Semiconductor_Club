@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCET-Semiconductor Innovation Club Other Activities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #242b2e, #1e2527, #20292c);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: rgba(5, 5, 5, 0.9);
+            text-align: center;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 100;
+            background: rgba(8, 8, 8, 0.2);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* Mobile Navigation Menu */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                background: rgba(0, 0, 0, 0.9);
+                padding: 15px;
+                border-radius: 10px;
+                text-align: center;
+                width: 200px;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            
+        }
+        h2 {
+            margin-top: 80px;
+            text-align: center;
+            color: rgb(81, 168, 250); /* Change to your preferred color */
+            font-size: 30px; /* Adjust the size as needed */
+        }
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .activity {
+            background: rgb(213, 215, 216);
+            color: black;
+            padding: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .activity:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .activity img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .activity:hover img {
+            transform: scale(1.3);
+        }
+
+        .activity h3 {
+            color: #0073e6;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .activity p {
+            font-size: 18px;
+            margin-top: 10px;
+            text-align: justify;
+            font-family: 'Poppins', sans-serif; /* Change to your preferred font */
+        }
+
+        @media (max-width: 768px) {
+            .activities {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+          
+            }
+            .activity img{
+                width: 90%;
+                margin-bottom: 15px;
+            }
+            .activity h3
+            {width:100%;
+            }
+            .activity p{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">KCET-Semiconductor Innovation Other Club</h1>
+        <div class="menu-toggle">☰</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About_Us.html">About Us</a></li>
+                <li><a href="Resources.html">Resources</a></li>
+                <li><a href="Team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2>Semiconductor Innovation Club Activities</h2>
+    <div class="activities">
+        
+        <div class="activity" >
+            <img src="Images/Inauguration.jpg" alt="Invited Talks">
+            <h3>Inauguration Function</h3>
+            <p>Student Members hear from experts in the field.</p>
+        </div>
+        
+        
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navMenu = document.querySelector("nav ul");
+
+            menuToggle.addEventListener("click", function() {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
